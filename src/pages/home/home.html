@@ -1,0 +1,21 @@
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      Basic Task
+    </ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Please select any Item</ion-label>
+    <ion-select [(ngModel)]="compareWithFn" (ngModelChange)="onChange($event)">
+      <ion-option *ngFor="let item of items">{{item.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>
+    {{ selected_item }}
+  </ion-label>
+</ion-item>
+
+</ion-list>
